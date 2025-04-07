@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 250px;
+      padding: 15px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+    }
+    
+    .dark-body {
+      background-color: #202124;
+      color: #e8eaed;
+    }
+    
+    h2 {
+      margin-top: 0;
+      text-align: center;
+      color: #4285f4;
+      font-size: 18px;
+    }
+    
+    .dark-body h2 {
+      color: #8ab4f8;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .toggle-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    /* Toggle Switch */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 52px;
+      height: 26px;
+    }
+    
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .3s;
+      border-radius: 34px;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .3s;
+      border-radius: 50%;
+    }
+    
+    input:checked + .slider {
+      background-color: #4285f4;
+    }
+    
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    
+    .divider {
+      height: 1px;
+      background-color: #dadce0;
+      margin: 5px 0;
+    }
+    
+    .dark-body .divider {
+      background-color: #3c4043;
+    }
+    
+    .mode-selector {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .radio-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 5px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .radio-option:hover {
+      background-color: #e8eaed;
+    }
+    
+    .dark-body .radio-option:hover {
+      background-color: #3c4043;
+    }
+    
+    .color-preview {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 1px solid #dadce0;
+    }
+    
+    .dark-body .color-preview {
+      border-color: #5f6368;
+    }
+    
+    .footer {
+      font-size: 12px;
+      color: #5f6368;
+      text-align: center;
+      margin-top: 15px;
+    }
+    
+    .dark-body .footer {
+      color: #9aa0a6;
+    }
+  </style>
+</head>
+<body>
+  <h2>Google Meet Dark Mode</h2>
+  <div class="container">
+    <div class="toggle-row">
+      <span>Enable Dark Mode</span>
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="divider"></div>
+    
+    <div class="mode-selector">
+      <div>Dark Mode Type:</div>
+      
+      <label class="radio-option">
+        <input type="radio" name="darkModeType" value="regular" checked>
+        <div class="color-preview" style="background-color: #131314;"></div>
+        <span>Regular</span>
+      </label>
+      
+      <label class="radio-option">
+        <input type="radio" name="darkModeType" value="amoled">
+        <div class="color-preview" style="background-color: #000000;"></div>
+        <span>AMOLED</span>
+      </label>
+    </div>
+  </div>
+  
+  <div class="footer">
+    Made by <a href="https://notnal.in" target="_blank">NotNalin</a>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
