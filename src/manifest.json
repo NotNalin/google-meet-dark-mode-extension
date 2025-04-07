@@ -7,7 +7,7 @@
   "host_permissions": ["*://meet.google.com/*"],
   "browser_specific_settings": {
     "gecko": {
-      "id": ""
+      "id": "googlemeetdarkmode@notnal.in"
     }
   },
   "action": {
