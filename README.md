@@ -8,17 +8,17 @@ Extension to add dark mode to Google Meet
 
 ## Installation
 
-### For Chrome
+### For Chromium-based Browsers (e.g. Chrome, Edge, Brave, Opera)
 1. Clone or download this repository to your local machine.
-2. Open Chrome and navigate to `chrome://extensions/`.
+2. Open your browser and navigate to `chrome://extensions/`.
 3. Enable "Developer mode" in the top-right corner.
-4. Click on "Load unpacked" and select the folder containing the extension files.
+4. Click on "Load unpacked" and select the `src` folder containing the extension files.
 
-### For Firefox
+### For Firefox-based Browsers (e.g., Firefox)
 1. Clone or download this repository to your local machine.
-2. Open Firefox and navigate to `about:debugging#/runtime/this-firefox`.
+2. Open your browser and navigate to `about:debugging#/runtime/this-firefox`.
 3. Click on "Load Temporary Add-on".
-4. Select the manifest file from the folder containing the extension files.
+4. Select the `manifest.json` file from the `src` folder containing the extension files.
 
 ## Usage
 1. Once installed, open Google Meet in your browser.

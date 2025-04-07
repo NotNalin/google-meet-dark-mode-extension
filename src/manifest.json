@@ -1,10 +1,16 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Google Meet Dark Mode",
   "version": "1.0",
   "description": "Enable dark mode on Google Meet",
   "permissions": ["activeTab", "storage"],
-  "browser_action": {
+  "host_permissions": ["*://meet.google.com/*"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": ""
+    }
+  },
+  "action": {
     "default_popup": "popup.html"
   },
   "background": {
@@ -16,10 +22,5 @@
       "js": ["content.js"],
       "run_at": "document_start"
     }
-  ],
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "googlemeetdarkmode@notnal.in"
-    }
-  }
+  ]
 }
